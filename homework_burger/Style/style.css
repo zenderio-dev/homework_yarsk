@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #feffd1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+    width: 700px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 98%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.555);
+    z-index: -1;
+    filter: blur(5px);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.first-shadow {
+    height: 50px;
+    top: 38%;
+    transform: translateX(-50%) skewY(-4deg);
+}
+
+.second-shadow {
+    top: 38%;
+    height: 50px;
+    transform: translateX(-50%) skewY(4deg);
+}
+
+.fird-shadow {
+    top: 39%;
+    transform: translateX(-50%) skewY(-2deg);
+}
+
+.fourth-shadow {
+    top: 5%;
+    height: 90px;
+    transform: translateX(-50%) skewY(-2deg);
+}
+
+.fifth-shadow {
+    top: 55%;
+    border-radius: 0 0 80% 80%;
+    transform: translateX(-50%);
+}
+
+.box:hover .first-shadow,
+.box:hover .second-shadow {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%) skewY(0deg);
+    background-color: blue;
+    filter: blur(20px);
+}
+
+.box:hover .fird-shadow {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%) skewY(0deg);
+    filter: blur(20px);
+    background-color: red;
+}
+
+.box:hover .fourth-shadow {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%) skewY(0deg);
+    filter: blur(20px);
+    background-color: green;
+}
+
+.box:hover .fifth-shadow {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%) skewY(0deg);
+    border-radius: 0 0 0 0;
+    filter: blur(20px);
+    background-color: orange;
+}
